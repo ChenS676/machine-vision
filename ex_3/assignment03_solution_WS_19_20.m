@@ -11,11 +11,12 @@ figure;
 imagesc(I);
 colormap gray;
 hold on;
-
+%%
 for i = 1:1:length(L.pixellist)
     Li = L.pixellist(i).list;
     plot(Li(:,1), Li(:,2), '*b', 'LineWidth', 3);
-    
+end
+
     sum_x = sum(Li(:, 1));
     sum_x2 = sum(Li(:, 1).^2);
     sum_y = sum(Li(:, 2));
@@ -37,10 +38,8 @@ for i = 1:1:length(L.pixellist)
     
     x = 1:0.1:size(I,2);
     y = (-lines(i, 1) * x - lines(i, 3)) / lines(i, 2);
+    figure,
     plot(x, y, '-k', 'LineWidth', 1);
-end
-
-
 %% Exercise 2
 for i = 1:1:length(L.pixellist)
     Li = L.pixellist(i).list;

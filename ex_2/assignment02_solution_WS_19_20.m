@@ -1,6 +1,7 @@
 %% assignment 02
 clear all;
 
+
 %% Exercise 1
 close all; clc;
 
